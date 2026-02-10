@@ -1,14 +1,31 @@
 @import "tailwindcss";
-@tailwind base;
-@tailwind utilities;
+
+@theme {
+  --color-triloe-blue: #3452FF;
+  --color-triloe-dark: #131313;
+  --color-triloe-grey: #5A5A59;
+  --color-triloe-light-grey: #8C8C8C;
+  --color-triloe-bg: #FFFFFF;
+  --color-triloe-off-white: #F7F7F7;
+  --color-triloe-border: #E5E5E5;
+  
+  --font-family-sans: "General Sans", sans-serif;
+  
+  --shadow-card: 0px 4px 24px 0px rgba(0, 0, 0, 0.06);
+  --shadow-button: 0px 10px 20px rgba(52, 82, 255, 0.2);
+  
+  --radius-4xl: 40px;
+}
 
 @layer base {
-    html {
-      scroll-behavior: smooth
-    }
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-      @apply bg-white text-triloe-dark antialiased;
+    @apply bg-white text-triloe-dark antialiased;
   }
 }
+
 
 

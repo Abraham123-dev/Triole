@@ -7,8 +7,5 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    tailwindcss({
-      config: './tailwind.config.js',
-    }),
   ],
 })

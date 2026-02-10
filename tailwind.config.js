@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"General Sans"', 'sans-serif'],
+        sans: ["Plus Jakarta Sans", 'sans-serif'],
       },
       colors: {
         triloe: {

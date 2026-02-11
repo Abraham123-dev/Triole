@@ -60,7 +60,7 @@ export const Navbar = () => {
              </Link>
               
                         {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-12">
+          <div className="hidden md:flex items-center gap-8 lg:gap-12">
             {navItems.map((item) => (
               <Link 
                 key={item.name} 
@@ -75,7 +75,7 @@ export const Navbar = () => {
           </div>
 
            {/* CTA Button */}
-          <div className="hidden lg:flex items-center">
+          <div className="hidden md:flex items-center">
             <Link to="/careers">
               <button className="bg-triloe-blue text-white px-8 py-3.5 rounded-full font-medium text-[16px] flex items-center gap-2.5 hover:bg-blue-700 transition-all shadow-button hover:shadow-lg hover:-translate-y-0.5">
                 Careers
@@ -86,7 +86,7 @@ export const Navbar = () => {
             
             {/* Mobile Menu Toggle */}
           <button 
-            className="lg:hidden text-triloe-dark p-2 z-50 relative" 
+            className="md:hidden text-triloe-dark p-2 z-50 relative" 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -116,7 +116,7 @@ export const Navbar = () => {
             animate={{ opacity: 1, height: '100vh' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed inset-0 bg-white z-40 lg:hidden pt-24 px-6 flex flex-col overflow-hidden"
+            className="fixed inset-0 bg-white z-40 md:hidden pt-24 px-6 flex flex-col overflow-hidden"
           >
              <div className="flex flex-col gap-2">
                {navItems.map((item, index) => (

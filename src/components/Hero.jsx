@@ -32,7 +32,7 @@ export const Hero = () => {
             </p>
             
             {/* CTA */}
-            <button className="group bg-triloe-lightGrey text-white pl-8 pr-2 py-2 rounded-full font-medium text-lg flex items-center gap-6 hover:bg-gray-500 transition-all duration-300 shadow-lg shadow-gray-200">
+            <button className="group bg-[#262626] text-white pl-8 pr-2 py-2 rounded-full font-medium text-lg flex items-center gap-6 hover:bg-gray-500 transition-all duration-300 shadow-lg shadow-gray-200">
               Contact us
               <div className="w-11 h-11 bg-white rounded-full flex items-center justify-center text-triloe-dark group-hover:scale-105 transition-transform shadow-sm">
                 <ArrowRight size={20} className="text-triloe-lightGrey" />
@@ -41,7 +41,7 @@ export const Hero = () => {
           </div>
 
           {/* Right Content - Image Composition */}
-          <div className="relative h-[500px] lg:h-[650px] w-full flex items-center justify-center lg:justify-end mt-10 lg:mt-0">
+          <div className="relative h-155 lg:h-[650px] w-full flex items-center justify-center lg:justify-end mt-10 lg:mt-0">
             
             {/* Card 1: Why join with us (Top Right) */}
             <div className="absolute top-0 right-0 lg:right-0 w-[280px] sm:w-[320px] bg-white p-3.5 rounded-[40px] shadow-card z-10 animate-in fade-in slide-in-from-bottom-8 duration-700">
@@ -53,7 +53,7 @@ export const Hero = () => {
                 />
               </div>
               <div className="flex justify-between items-center px-2 pb-2">
-                <h3 className="text-xl font-semibold text-triloe-dark">Why join with us</h3>
+                <h3 className="text-xl font-bold text-triloe-dark">Why join with us</h3>
                 <div className="w-10 h-10 bg-triloe-offWhite rounded-full flex items-center justify-center text-triloe-dark transition-colors hover:bg-gray-200 cursor-pointer">
                   <ArrowUpRight size={20} />
                 </div>
@@ -78,9 +78,9 @@ export const Hero = () => {
             </div>
 
             {/* Floating Badge: 15+ Position (Bottom Right) */}
-            <div className="absolute bottom-0 right-0 lg:right-4 bg-white p-5 rounded-[32px] shadow-card z-30 flex items-center gap-5 min-w-[200px] animate-in fade-in zoom-in duration-500 delay-300">
+            <div className="absolute bottom-0 right-0   lg:right-10 bg-white p-5 rounded-[32px] shadow-card z-30 flex items-center gap-5 min-w-[200px] animate-in fade-in zoom-in duration-500 delay-300">
               <div className="flex flex-col">
-                <span className="text-[32px] font-bold text-triloe-dark leading-none">15+</span>
+                <span className="text-[20px] font-extrabold text-triloe-dark leading-none">15+</span>
                 <span className="text-triloe-grey/80 text-sm font-medium mt-1">Position</span>
               </div>
               <div className="w-[52px] h-[52px] bg-triloe-dark rounded-full flex items-center justify-center text-white ml-auto shadow-lg shadow-black/20">

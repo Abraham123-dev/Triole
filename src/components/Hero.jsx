@@ -11,9 +11,19 @@ const container = {
   },
 };
 
-const fadeSlide = {
-  hidden: { opacity: 0, y: 40 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' } },
+const textAnim = {
+  hidden: { opacity: 0, x: -60, scale: 0.95 },
+  show: { opacity: 1, x: 0, scale: 1, transition: { duration: 0.9, ease: 'easeOut' } },
+};
+
+const cardAnim = {
+  hidden: { opacity: 0, x: 60, skewY: 8, rotate: 6 },
+  show: { opacity: 1, x: 0, skewY: 0, rotate: 0, transition: { duration: 0.9, ease: 'easeOut' } },
+};
+
+const badgeAnim = {
+  hidden: { opacity: 0, scale: 0.7, y: 40 },
+  show: { opacity: 1, scale: 1, y: 0, transition: { type: 'spring', stiffness: 420, damping: 32, delay: 0.5 } },
 };
 
 export const Hero = () => {
@@ -33,7 +43,7 @@ export const Hero = () => {
           animate="show"
         >
           {/* Left Content */}
-          <motion.div className="max-w-xl relative z-10 flex flex-col items-start" variants={fadeSlide}>
+          <motion.div className="max-w-xl relative z-10 flex flex-col items-start" variants={textAnim}>
             {/* Tag */}
             <div className="inline-flex items-center px-5 py-2.5 rounded-full border border-gray-200 bg-white mb-8 shadow-sm">
               <span className="text-triloe-grey font-medium text-sm tracking-wide">Our Careers</span>
@@ -57,9 +67,9 @@ export const Hero = () => {
           </motion.div>
 
           {/* Right Content - Image Composition */}
-          <motion.div className="relative h-155 lg:h-[650px] w-full flex items-center justify-center lg:justify-end mt-10 lg:mt-0" variants={fadeSlide}>
+          <motion.div className="relative h-155 lg:h-[650px] w-full flex items-center justify-center lg:justify-end mt-10 lg:mt-0" variants={cardAnim}>
             {/* Card 1: Why join with us (Top Right) */}
-            <motion.div className="absolute top-0 right-0 lg:right-0 w-[280px] sm:w-[320px] bg-white p-3.5 rounded-[40px] shadow-card z-10" variants={fadeSlide}>
+            <motion.div className="absolute top-0 right-0 lg:right-0 w-[280px] sm:w-[320px] bg-white p-3.5 rounded-[40px] shadow-card z-10" variants={cardAnim}>
               <div className="relative h-[200px] rounded-[32px] overflow-hidden mb-4">
                 <img 
                   src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800&auto=format&fit=crop" 
@@ -75,7 +85,7 @@ export const Hero = () => {
               </div>
             </motion.div>
             {/* Card 2: Let's grow our company (Bottom Left) */}
-            <motion.div className="absolute bottom-12 lg:bottom-20 right-[25%] lg:right-[35%] w-[280px] sm:w-[320px] bg-white p-3.5 rounded-[40px] shadow-card z-20" variants={fadeSlide}>
+            <motion.div className="absolute bottom-12 lg:bottom-20 right-[25%] lg:right-[35%] w-[280px] sm:w-[320px] bg-white p-3.5 rounded-[40px] shadow-card z-20" variants={cardAnim}>
               <div className="relative h-50 rounded-[32px] overflow-hidden mb-4">
                 <img 
                   src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop" 
@@ -91,7 +101,7 @@ export const Hero = () => {
               </div>
             </motion.div>
             {/* Floating Badge: 15+ Position (Bottom Right) */}
-            <motion.div className="absolute bottom-0 right-0   lg:right-10 bg-white p-5 rounded-[32px] shadow-card z-30 flex items-center gap-5 min-w-[200px]" variants={fadeSlide}>
+            <motion.div className="absolute bottom-0 right-0   lg:right-10 bg-white p-5 rounded-[32px] shadow-card z-30 flex items-center gap-5 min-w-[200px]" variants={badgeAnim}>
               <div className="flex flex-col">
                 <span className="text-[20px] font-extrabold text-triloe-dark leading-none">15+</span>
                 <span className="text-triloe-grey/80 text-sm font-medium mt-1">Position</span>

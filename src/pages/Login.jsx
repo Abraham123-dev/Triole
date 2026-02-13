@@ -20,7 +20,7 @@ export default function Login() {
       <div className="w-full max-w-sm bg-white rounded-3xl shadow-xl p-8 border border-gray-100 mt-24 md:mt-32">
         <h2 className="text-2xl font-bold text-triloe-dark mb-2 text-center">Log In</h2>
         <div className="mb-5 text-center">
-          <p className="text-triloe-dark font-semibold text-lg mb-1">Welcome Back to Triole!</p>
+          <p className="text-triloe-dark font-semibold text-lg mb-1">Welcome Back to Triloe!</p>
           <p className="text-triloe-grey text-sm">Log in to access your dashboard, manage your team, and explore the latest features designed to help your business grow.</p>
         </div>
         <form className="space-y-6" onSubmit={handleSubmit}>

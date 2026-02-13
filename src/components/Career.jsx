@@ -23,7 +23,7 @@ export const Careers = () => {
               Join our growing team
             </h2>
           </div>
-          <a href="#" className="text-triloe-blue font-medium flex items-center gap-2 hover:gap-3 transition-all">
+          <a href="/careers#open-positions" className="text-triloe-blue font-medium flex items-center gap-2 hover:gap-3 transition-all">
             View all positions <ArrowRight size={20} />
           </a>
         </div>

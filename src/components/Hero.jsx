@@ -1,9 +1,19 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import { ArrowRight, Briefcase, TrendingUp, ArrowUpRight } from 'lucide-react';
+import NewsletterModal from './NewsletterModal';
 
 
 
 export const Hero = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [subscribedEmail, setSubscribedEmail] = useState("");
+
+  function handleSubscribe(email) {
+    setSubscribedEmail(email);
+    // Optionally: trigger toast or API call here
+  }
+
   return (
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen bg-white">
       
@@ -30,12 +40,20 @@ export const Hero = () => {
               We value every voice. Feedback from our clients pushes us to refine, elevate, and grow smarter every day.
             </p>
             {/* CTA */}
-            <button className="group bg-[#262626] text-white pl-8 pr-2 py-2 rounded-full font-medium text-lg flex items-center gap-6 hover:bg-gray-500 transition-all duration-300 shadow-lg shadow-gray-200">
+            <button
+              className="group bg-[#262626] text-white pl-8 pr-2 py-2 rounded-full font-medium text-lg flex items-center gap-6 hover:bg-gray-500 transition-all duration-300 shadow-lg shadow-gray-200"
+              onClick={() => setModalOpen(true)}
+            >
               Contact us
               <div className="w-11 h-11 bg-white rounded-full flex items-center justify-center text-triloe-dark group-hover:scale-105 transition-transform shadow-sm">
                 <ArrowRight size={20} className="text-triloe-lightGrey" />
               </div>
             </button>
+            <NewsletterModal
+              open={modalOpen}
+              onClose={() => setModalOpen(false)}
+              onSubscribe={handleSubscribe}
+            />
           </div>
 
           {/* Right Content - Image Composition */}

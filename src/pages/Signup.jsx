@@ -20,7 +20,7 @@ export default function Signup() {
       <div className="w-full max-w-sm bg-white rounded-3xl shadow-xl p-8 border border-gray-100 mt-24 md:mt-32">
         <h2 className="text-2xl font-bold text-triloe-dark mb-2 text-center">Sign Up</h2>
         <div className="mb-5 text-center">
-          <p className="text-triloe-dark font-semibold text-lg mb-1">Welcome to Triole!</p>
+          <p className="text-triloe-dark font-semibold text-lg mb-1">Welcome to Triloe!</p>
         </div>
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div>

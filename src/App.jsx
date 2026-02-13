@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import { Footer } from "./components/Footer";
-import { Careers } from "./components/Career";
+import { CareersPage } from "./components/Careerpage";
 
 function App() {
   return (
@@ -17,9 +17,9 @@ function App() {
               <div className="grow">
                 <Routes>
                   <Route path="/" element={<Home />} />
-                  <Route path="/careers" element={<Careers />} />
                   <Route path="/signup" element={<Signup />} />
                   <Route path="/login" element={<Login />} />
+                     <Route path="/careers" element={<CareersPage />} />
                 </Routes>
               </div>
               <Footer />

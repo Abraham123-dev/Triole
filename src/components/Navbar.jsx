@@ -6,8 +6,8 @@ import { motion, AnimatePresence } from 'framer-motion';
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/#about' },
-    { name: 'Service', path: '/#service' },
-    { name: 'Testimonial', path: '/#testimonial' },
+    { name: 'Services', path: '/#service' },
+    { name: 'Testimonials', path: '/#testimonial' },
     { name: 'Pricing', path: '/#pricing' },
   ];
 
@@ -62,16 +62,24 @@ export const Navbar = () => {
                         {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8 lg:gap-12">
             {navItems.map((item) => (
-              <Link 
-                key={item.name} 
-                to={item.path}
-                onClick={() => handleNavClick(item.path)}
-                className="text-triloe-grey hover:text-triloe-blue font-medium text-[16px] transition-colors"
-              >
-                {item.name}
-              </Link>
+              item.path.startsWith('/#') ? (
+                <a
+                  key={item.name}
+                  href={item.path.replace('/','')}
+                  className="text-triloe-grey hover:text-triloe-blue font-medium text-[16px] transition-colors"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className="text-triloe-grey hover:text-triloe-blue font-medium text-[16px] transition-colors"
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
-           
           </div>
 
            {/* CTA Button */}
@@ -126,13 +134,24 @@ export const Navbar = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1 + index * 0.1 }}
                   >
-                    <Link 
-                      to={item.path} 
-                      onClick={() => handleNavClick(item.path)}
-                      className="block text-2xl font-medium text-triloe-dark py-4 border-b border-gray-50 hover:text-triloe-blue"
-                    >
-                      {item.name}
-                    </Link>
+
+                    {item.path.startsWith('/#') ? (
+                      <a
+                        href={item.path.replace('/', '')}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="block text-2xl font-medium text-triloe-dark py-4 border-b border-gray-50 hover:text-triloe-blue"
+                      >
+                        {item.name}
+                      </a>
+                    ) : (
+                      <Link
+                        to={item.path}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="block text-2xl font-medium text-triloe-dark py-4 border-b border-gray-50 hover:text-triloe-blue"
+                      >
+                        {item.name}
+                      </Link>
+                    )}
                   </motion.div>
                ))}
                

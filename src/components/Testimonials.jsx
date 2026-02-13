@@ -63,7 +63,7 @@ export const Testimonials = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">
             <span className="text-triloe-blue font-medium tracking-wide uppercase text-sm mb-3 block">Testimonials</span>
-            <h2 className="text-4xl lg:text-5xl font-semibold text-triloe-dark tracking-tight">
+            <h2 className="text-4xl lg:text-5xl font-bold text-triloe-dark tracking-tight">
               Trusted by industry leaders
             </h2>
           </div>

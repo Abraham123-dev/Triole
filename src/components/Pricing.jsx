@@ -102,7 +102,7 @@ export const Pricing = () => {
                     ? 'bg-triloe-blue text-white hover:bg-blue-700 shadow-button' 
                     : 'bg-white border border-gray-200 text-triloe-dark hover:bg-gray-50'
                 }`}
-                onClick={() => window.location.href = '/signup'}
+                onClick={() => window.location.href = '/login'}
               >
                 {plan.button}
               </button>

@@ -1,23 +1,28 @@
+
 import React, { useState } from "react";
-import { toast } from "sonner";
+import { useToast } from "../components/Toast";
 
 export default function Login() {
   const [loading, setLoading] = useState(false);
+  const { showToast } = useToast();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      toast.error("Sorry, it is a demo website.");
+      showToast("Sorry, it is a demo website.", "error");
     }, 1500);
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-white">
-      <div className="w-full max-w-md bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
-        <h2 className="text-3xl font-bold text-triloe-dark mb-2 text-center">Log In</h2>
-        <p className="text-triloe-grey mb-8 text-center">Welcome back! Please log in to your account.</p>
+      <div className="w-full max-w-sm bg-white rounded-3xl shadow-xl p-8 border border-gray-100 mt-24 md:mt-32">
+        <h2 className="text-2xl font-bold text-triloe-dark mb-2 text-center">Log In</h2>
+        <div className="mb-5 text-center">
+          <p className="text-triloe-dark font-semibold text-lg mb-1">Welcome Back to Triole!</p>
+          <p className="text-triloe-grey text-sm">Log in to access your dashboard, manage your team, and explore the latest features designed to help your business grow.</p>
+        </div>
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div>
             <label className="block text-triloe-dark font-medium mb-1" htmlFor="email">Email</label>

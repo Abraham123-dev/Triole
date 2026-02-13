@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import { Footer } from "./components/footer";
+import { Careers } from "./components/Career";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
               <div className="grow">
                 <Routes>
                   <Route path="/" element={<Home />} />
+                  <Route path="/careers" element={<Careers />} />
                   <Route path="/signup" element={<Signup />} />
                   <Route path="/login" element={<Login />} />
                 </Routes>
